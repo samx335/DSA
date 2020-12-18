@@ -1,0 +1,16 @@
+---
+title: "Reading Data into R"
+author: "Sumeet Chalak"
+date: "18/12/2020"
+output: word_document
+---
+```{r}
+url=read.table("C:\\Users\\samch\\Documents\\PGDM Material\\2.Term II\\Data Science and Analytics\\Tomato First.csv",header=TRUE,sep=",")
+head(url)
+```
+
+Loading Built in data sets
+```{r}
+data("mtcars")
+head(mtcars, 7)
+```

@@ -1,0 +1,25 @@
+---
+title: "T Test & ANOVA"
+author: "Sumeet Chalak"
+date: "18/12/2020"
+output: word_document
+---
+
+```{r}
+rm(list=ls())
+data(tips, package="reshape2")
+head(tips)
+str(tips)
+# Returns Unique values
+unique(tips$sex)
+unique(tips$day)
+# one sample t test (H0 = 2.5, Two Tailed)
+t.test(tips$tip, alternative="two.sided",mu=2.5)
+# one sample t test (H0 = 2.5, upper tail)
+t.test(tips$tip, alternative="greater",mu=2.5)
+  
+# Two sample t test 
+t.test(tip~sex, data=tips, var.equal = TRUE)
+# Anova
+tipAnova=aov(tip~day,tips)
+summary(tipAnova)

@@ -1,0 +1,32 @@
+---
+title: "Statistics"
+author: "Sumeet Chalak"
+date: "18/12/2020"
+output: word_document
+---
+
+```{r}
+# Generate a random sample
+d=sample(x=1:25,size=50,replace=TRUE)
+d
+mean(d)
+# Weighted means
+grade=c(95,92,91,87)
+weights= c(1/2,1/4,1/8,1/8)
+mean(grade)
+weighted.mean(x=grade,w=weights)
+# Variance & SD
+var(d)
+sd(x=d,na.rm=FALSE)
+# Min & Max Functions
+min(d)
+max(d)
+median(d)
+quantile(d,probs=c(0.2,0.4,0.6,0.8))
+```
+```{r}
+library("ggplot2")
+head(economics)
+# Covariance
+cor(economics$pce,economics$psavert)
+```

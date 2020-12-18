@@ -1,0 +1,39 @@
+---
+title: "Data Frames"
+author: "Sumeet Chalak"
+date: "18/12/2020"
+output: word_document
+---
+
+```{r}
+rm(list=ls())
+x=1:10
+y=-4:5
+z=c("jan","feb","mar","apr","may","jun","jul","aug","sep","oct")
+f=data.frame(x,y,z)
+f
+
+#assigning Names
+f=data.frame(First=x,Second=y,Third=z)
+f
+
+#Dimensions
+nrow(f)
+ncol(f)
+dim(f)
+names(f)
+rownames(f)
+
+# Head & Tail Function
+head(f,n=4)
+
+tail(f)
+
+# Specific Selection
+f$First
+
+f[1,3]
+
+f[1:3,2]
+
+f[c(1,9),2]
